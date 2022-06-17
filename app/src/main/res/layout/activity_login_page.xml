@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/POL360"
+    android:padding="16dp"
+    tools:context=".LoginPage">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="1">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/LoginPageIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:indicatorColor="@color/OutlineBlue"
+                android:visibility="invisible"
+                android:indeterminate="true" />
+
+            <ImageView
+                android:id="@+id/Logo"
+                android:layout_width="250dp"
+                android:layout_height="245dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-40dp"
+                android:background="@mipmap/bryte_logo" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="140dp"
+                android:stretchColumns="*"
+                android:orientation="vertical">
+
+                <TableRow>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/OUTER"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:passwordToggleEnabled="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        app:helperText="Required *"
+                        app:boxCornerRadiusBottomStart="24dp"
+                        app:boxCornerRadiusBottomEnd="24dp"
+                        app:boxCornerRadiusTopStart="24dp"
+                        app:boxCornerRadiusTopEnd="24dp"
+                        app:boxStrokeColor="@color/POL360"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                        <EditText
+                            android:id="@+id/etUserPin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img"
+                            android:layout_marginTop="10dp"
+                            android:maxLength="20"
+                            android:inputType="textPassword"
+                            android:hint="User Pin"
+                            android:text="50289"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/LoginBtn"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/white"
+                        android:backgroundTint="@color/MobilePayGreenBTN"
+                        android:textColor="@color/white"
+                        android:layout_margin="10dp"
+                        app:cornerRadius="12dp"
+                        app:elevation="12dp"
+                        app:rippleColor="@color/MobilePayGreenBTNRipple"
+                        android:text="Login" />
+                </TableRow>
+
+            </TableLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+</LinearLayout>

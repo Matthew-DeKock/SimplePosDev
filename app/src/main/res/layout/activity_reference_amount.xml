@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/POL360"
+    android:padding="16dp"
+    tools:context=".ReferenceAmount">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="1">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <ImageView
+                android:id="@+id/Logo"
+                android:layout_width="250dp"
+                android:layout_height="245dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-40dp"
+                android:background="@mipmap/bryte_logo" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/ReferenceIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:indicatorColor="@color/OutlineBlue"
+                android:visibility="invisible"
+                android:indeterminate="true" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="140dp"
+                android:stretchColumns="*"
+                android:orientation="vertical">
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/Home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Payment"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:gravity="top" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="160dp"
+                android:stretchColumns="*"
+                android:orientation="vertical">
+
+                <TableRow android:paddingTop="20dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:helperText="Required *"
+                        app:endIconMode="clear_text"
+                        app:boxCornerRadiusBottomStart="24dp"
+                        app:boxCornerRadiusBottomEnd="24dp"
+                        app:boxCornerRadiusTopStart="24dp"
+                        app:boxCornerRadiusTopEnd="24dp"
+                        app:boxStrokeColor="@color/POL360"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                        <EditText
+                            android:id="@+id/Reference"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
+                            android:inputType="text"
+                            android:hint="Reference"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="270dp"
+                android:stretchColumns="*"
+                android:orientation="vertical">
+                <TableRow>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:helperText="Required *"
+                        app:endIconMode="clear_text"
+                        app:boxCornerRadiusBottomStart="24dp"
+                        app:boxCornerRadiusBottomEnd="24dp"
+                        app:boxCornerRadiusTopStart="24dp"
+                        app:boxCornerRadiusTopEnd="24dp"
+                        app:boxStrokeColor="@color/POL360"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                        <EditText
+                            android:id="@+id/OwnAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
+                            android:inputType="numberDecimal"
+                            android:hint="Own Amount:"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="400dp"
+                android:stretchColumns="*"
+                android:background="#f7f7f7"
+                android:orientation="horizontal">
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/CancelBtn"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/white"
+                        android:backgroundTint="#dc3545"
+                        android:textColor="@color/white"
+                        android:layout_margin="10dp"
+                        app:cornerRadius="12dp"
+                        app:elevation="12dp"
+                        android:textSize="12sp"
+                        android:text="Logout" />
+
+                    <Button
+                        android:id="@+id/SubmitBtn"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/white"
+                        android:backgroundTint="@color/MobilePayGreenBTN"
+                        android:textColor="@color/white"
+                        android:layout_margin="10dp"
+                        app:cornerRadius="12dp"
+                        app:elevation="12dp"
+                        android:textSize="12sp"
+                        app:rippleColor="@color/MobilePayGreenBTNRipple"
+                        android:text="Submit" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+</LinearLayout>
